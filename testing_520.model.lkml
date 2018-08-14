@@ -11,6 +11,7 @@ datagroup: testing_520_default_datagroup {
 persist_with: testing_520_default_datagroup
 
 explore: events {
+  label: "Events"
   join: users {
     type: left_outer
     sql_on: ${events.user_id} = ${users.id} ;;
