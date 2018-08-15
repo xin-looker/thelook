@@ -45,3 +45,5 @@ explore: orders {
 }
 
 explore: users {}
+
+explore: new_orders {}
