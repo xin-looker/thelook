@@ -22,7 +22,7 @@ view: new_orders {
   dimension: created_time {
     type: date_time
   }
-  measure: count {
+  dimension: count {
     type: number
   }
 }
