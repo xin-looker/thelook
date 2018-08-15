@@ -3,6 +3,7 @@
 
 view: new_orders {
   derived_table: {
+    datagroup_trigger: new_order_datagroup
     explore_source: orders {
       column: user_id {}
       column: name { field: users.name }
