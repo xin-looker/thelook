@@ -3,12 +3,12 @@ connection: "thelook_bigquery"
 # include all the views
 include: "*.view"
 
-datagroup: data_delivery_padawan_xin_default_datagroup {
-  # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "1 hour"
+datagroup: new_order_datagroup {
+  sql_trigger: SELECT MAX(id) FROM orders;;
+  max_cache_age: "24 hour"
 }
 
-persist_with: data_delivery_padawan_xin_default_datagroup
+persist_with: new_order_datagroup
 
 # NOTE: please see https://looker.com/docs/r/sql/bigquery?version=5.22
 # NOTE: for BigQuery specific considerations
